@@ -21,7 +21,8 @@ RUN ./mvnw dependency:go-offline -B
 COPY src src
 
 # 5️⃣ Build the JAR (skip tests for faster build)
-RUN ./mvnw clean package -DskipTests
+# RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -DskipTests -Dmaven.test.skip=true
 
 # ===========================
 # Stage 2: Run the JAR
