@@ -12,6 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Sabhi endpoints ke liye
                 .allowedOrigins("http://127.0.0.1:5500") // Aapka Frontend URL
+                .allowedOrigins("https://civic-insight-2i2101yj3-avenger-manas-projects.vercel.app") // Aapka Vercel URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
