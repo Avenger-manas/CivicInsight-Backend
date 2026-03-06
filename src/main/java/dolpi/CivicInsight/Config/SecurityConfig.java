@@ -71,7 +71,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
         CorsConfiguration configuration = new CorsConfiguration();
         // Frontend ke dono possible origins allow karein
         configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "https://civic-insight-2i2101yj3-avenger-manas-projects.vercel.app"));
-         configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", " "));
+         configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "https://civic-insight.vercel.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept", "X-Requested-With"));
         configuration.setAllowCredentials(true);
