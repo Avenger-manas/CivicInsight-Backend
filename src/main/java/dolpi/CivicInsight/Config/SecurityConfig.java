@@ -66,22 +66,52 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
     return http.build();
 }
 
-    @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        // Frontend ke dono possible origins allow karein
-        configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "https://civic-insight-2i2101yj3-avenger-manas-projects.vercel.app"));
-         configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "https://civic-insight.vercel.app"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept", "X-Requested-With"));
-        configuration.setAllowCredentials(true);
-        configuration.setMaxAge(3600L); // 1 ghante ke liye preflight cache karein
+    // @Bean
+    // public CorsConfigurationSource corsConfigurationSource() {
+    //     CorsConfiguration configuration = new CorsConfiguration();
+    //     // Frontend ke dono possible origins allow karein
+    //     configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "https://civic-insight-2i2101yj3-avenger-manas-projects.vercel.app"));
+    //      configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500", "https://civic-insight.vercel.app"));
+    //     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+    //     configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept", "X-Requested-With"));
+    //     configuration.setAllowCredentials(true);
+    //     configuration.setMaxAge(3600L); // 1 ghante ke liye preflight cache karein
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
+    //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    //     source.registerCorsConfiguration("/**", configuration);
+    //     return source;
+    // }
+@Bean
+public CorsConfigurationSource corsConfigurationSource() {
+    CorsConfiguration configuration = new CorsConfiguration();
+    
+    // Sabhi Origins ko ek hi list mein dalein
+    configuration.setAllowedOrigins(Arrays.asList(
+        "http://127.0.0.1:5500", 
+        "https://civic-insight.vercel.app",
+        "https://civic-insight-2i2101yj3-avenger-manas-projects.vercel.app"
+    ));
+    
+    configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+    
+    // Headers mein "Authorization" aur "Origin" ka hona bahut zaroori hai
+    configuration.setAllowedHeaders(Arrays.asList(
+        "Authorization", 
+        "Content-Type", 
+        "Accept", 
+        "X-Requested-With", 
+        "Origin", 
+        "Access-Control-Request-Method", 
+        "Access-Control-Request-Headers"
+    ));
+    
+    configuration.setAllowCredentials(true);
+    configuration.setMaxAge(3600L);
 
+    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    source.registerCorsConfiguration("/**", configuration);
+    return source;
+}
 
 
     @Bean
