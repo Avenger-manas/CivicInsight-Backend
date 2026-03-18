@@ -7,5 +7,5 @@
 Configure Environment:Update src/main/resources/application.properties:Propertiesspring.data.mongodb.uri=your_mongodb_uri
 ollama.api.url=http://localhost:11434/api/generate
 Build & Run:Bashmvn clean install
-mvn spring-boot:run
+mvn spring-boot:run  
 📈 Impact80% Faster Sorting: Complaints are categorized instantly by AI.100% Accountability: Every ticket is timestamped and assigned to a specific human.Data-Driven Policy: Leaders can see which areas have the most issues and allocate budget accordingly.
