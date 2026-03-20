@@ -44,28 +44,19 @@
 //     private String status;
 // }
 
-package dolpi.CivicInsight.Entity;
-
-import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-import java.time.LocalDateTime;
-import java.util.List;
-
-@Getter
+@Data
+@Getter  
 @Setter
 @Document(collection = "complaint")
-@NoArgsConstructor                    
-public class Complaints {             
+@NoArgsConstructor
+public class Complaints {
     @Id
     private String id;
-    private String Name;              
+    private String name;        
     private String city;
-    private String ward_number;
+    private String wardNumber;
     private String complaint;
-    private String OfficerName;
+    private String officerName;
     private String departmentName;
     @Field("officer_id")
     private String officerId;
