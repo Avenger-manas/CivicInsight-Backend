@@ -2,6 +2,7 @@ package dolpi.CivicInsight.DTO;
 
 import lombok.*;
 
+@Data
 @Getter
 @Setter
 @NoArgsConstructor
