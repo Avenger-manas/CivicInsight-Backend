@@ -20,6 +20,9 @@ public class OfficerService {
     @Autowired
     private OfficerRepo officerRepo;
 
+    @Autowired
+    private EmailService emailService;
+
     public String Createofficer(officerDTO officerDTO){
         String encodepassword=passwordEncoder.encode(officerDTO.getPassword());
         OfficerEnty user=new OfficerEnty();
