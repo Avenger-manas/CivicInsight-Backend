@@ -18,6 +18,9 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;
 
+    @Autowired
+    private EmailService emailService; 
+
     public String CreateUser(userdto userdto){
         String encodepassword=passwordEncoder.encode(userdto.getPassword());
         UserEnity user=new UserEnity();
