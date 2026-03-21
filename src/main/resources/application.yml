@@ -3,30 +3,10 @@ spring:
     mongodb:
       uri: ${MONGODB_URI}
       database: civicinsight
-  mail:
-    host: smtp.gmail.com
-    port: 465
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
-    properties:
-      mail:
-        smtp:
-          auth: true
-          # SSL/TLS configuration for Port 465
-          ssl:
-            enable: true
-            trust: smtp.gmail.com
-          # Socket factory settings (Port 465 ke liye zaroori hai)
-          socketFactory:
-            port: 465
-            class: javax.net.ssl.SSLSocketFactory
-            fallback: false
-          # Timeouts to prevent hanging
-          connectiontimeout: 10000
-          timeout: 10000
-          writetimeout: 10000
-        # Logs mein error dekhne ke liye isse true rakhein
-        debug: true
+
+resend:
+  api:
+    key: ${RESEND_API_KEY}
 
 server:
   port: ${PORT:8080}
