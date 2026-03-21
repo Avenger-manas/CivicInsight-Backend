@@ -21,6 +21,9 @@ public class Complaint {
     @Autowired
     private CompliantService compliantService;
 
+    @Autowired
+    private UserRepo userRepo; 
+
     @PostMapping("/submit")
     public ResponseEntity<?> complaint(@RequestBody Complaints complaints,Authentication authentication){
         String username = authentication.getName(); 
