@@ -3,10 +3,17 @@ spring:
     mongodb:
       uri: ${MONGODB_URI}
       database: civicinsight
-
-resend:
-  api:
-    key: ${RESEND_API_KEY}
+  mail:
+    host: smtp-relay.brevo.com
+    port: 587
+    username: ${BREVO_EMAIL}
+    password: ${BREVO_SMTP_KEY}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 server:
   port: ${PORT:8080}
