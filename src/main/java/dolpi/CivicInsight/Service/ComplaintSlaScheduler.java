@@ -97,7 +97,8 @@ public class ComplaintSlaScheduler {
 
                 //This Rating logic
                 if(complaint.getOfficerId() != null){
-                  OfficerEnty officer=officerRepo.findById(complaint.getOfficerId());
+                 OfficerEnty officer = officerRepo.findById(complaint.getOfficerId()).orElse(null);
+                    if (officer != null) {
 
                   double currentRating = officer.getRating();
                   int total = officer.getTotalRatings();
@@ -108,6 +109,7 @@ public class ComplaintSlaScheduler {
                  officer.setTotalRatings(total + 1);
                  officer.setMissed(officer.getMissed() + 1);
                  officerRepo.save(officer);
+                 }
             }
        }
     }
