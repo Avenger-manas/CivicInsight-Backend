@@ -29,7 +29,7 @@ public class ComplaintSlaScheduler {
     private EmailService emailService; //Email bhejne ke liye
 
     @Autowired 
-    private OfficerRepo officerrepo;
+    private OfficerRepo officerRepo;
 
     @Scheduled(fixedRate = 1800000)
     public void checkSlaBreaches() {
