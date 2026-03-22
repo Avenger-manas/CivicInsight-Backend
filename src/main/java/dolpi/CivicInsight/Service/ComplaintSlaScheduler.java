@@ -2,8 +2,10 @@ package dolpi.CivicInsight.Service;
 
 import dolpi.CivicInsight.Entity.Admin;
 import dolpi.CivicInsight.Entity.Complaints;
+import dolpi.CivicInsight.Entity.OfficerEnty;
 import dolpi.CivicInsight.Entity.UserEnity;
 import dolpi.CivicInsight.Repository.AdminRepo;
+import dolpi.CivicInsight.Repository.OfficerRepo;
 import dolpi.CivicInsight.Repository.ReportRepo;
 import dolpi.CivicInsight.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
