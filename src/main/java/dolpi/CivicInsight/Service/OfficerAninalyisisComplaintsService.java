@@ -23,10 +23,10 @@ public class OfficerAninalyisisComplaintsService {
     private OfficerRepo officerRepo;
 
     @Autowired
-    private UserRepo userRepo; //User fetch karne ke liye
+    private UserRepo userRepo; 
 
     @Autowired
-    private EmailService emailService; // Email bhejne ke liye
+    private EmailService emailService;
 
     public List<Complaints> FetchComplaintOfficer(String officerId) {
         List<Complaints> listComplaints = reportRepo.findByOfficerId(officerId);
@@ -56,7 +56,7 @@ public class OfficerAninalyisisComplaintsService {
         OfficerEnty officer = optionalofficer.get();
         officer.setCountReport(officer.getCountReport() - 1);
 
-        // ⭐ RATING LOGIC
+        // RATING LOGIC
         LocalDateTime deadline = getDeadline(complaint);
         LocalDateTime now = LocalDateTime.now();
 
@@ -112,7 +112,7 @@ public class OfficerAninalyisisComplaintsService {
     }
 }
 
-    // ⏰ Deadline helper method — same class mein add karo
+    // Deadline helper method 
 private LocalDateTime getDeadline(Complaints complaint) {
     return switch (complaint.getUrgency()) {
         case "HIGH"   -> complaint.getCreatedAt().plusHours(24);
