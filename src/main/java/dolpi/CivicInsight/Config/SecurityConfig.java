@@ -60,7 +60,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
                     .requestMatchers("/user/complaint/**").hasRole("USER")
                     .requestMatchers("/department_officer/Analysis/**").hasAnyRole("OFFICER", "ADMIN")
                     .requestMatchers("/admin/fetch/**").hasRole("ADMIN")
-                    .requestMatchers("/open/**").hasAnyRole("USER", "OFFICER", "ADMIN")
+                    .requestMatchers("/open/officer/**").hasAnyRole("USER", "OFFICER", "ADMIN")
                     .anyRequest().authenticated()
             )
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
