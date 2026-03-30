@@ -44,4 +44,9 @@ public class CorsConfig {
 
         return new CorsFilter(source);
     }
+
+    @Bean
+    public RestTemplate restTemplate() {
+    return new RestTemplate();
+  }
 }
