@@ -65,7 +65,7 @@ CivicInsight addresses all five by establishing a **unified Digital Command Cent
 
 The system is designed with a **Privacy-First** principle at its core. All AI inference is executed on local hardware via Ollama — citizen data never reaches an external API.
 
-```
+--
                         ┌──────────────────────────────────────────────────┐
                         │              CIVICINSIGHT BACKEND                │
                         │                                                  │
