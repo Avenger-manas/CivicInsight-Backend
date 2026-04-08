@@ -258,7 +258,7 @@ GET /auth/google/callback?code={auth_code}&check=user
 
 **Response:** A signed JWT string (quoted), e.g. `"eyJhbGciOiJIUzI1NiJ9..."`
 
-### What Happens on First Login
+--- What Happens on First Login
 
 1. Backend exchanges `code` with Google for an access token
 2. Google profile (`email`, `name`, `picture`) is fetched
