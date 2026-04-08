@@ -45,12 +45,12 @@
 
 ---
 
-## 🎯 Problem Statement
+ 🎯 Problem Statement 
 
 Political offices across India face a systemic crisis in grievance management:
 
 | Challenge | Impact |
-|:---|:---|
+||:---|:---||
 | **Fragmented Intake Channels** | Complaints arrive via WhatsApp, letters, and phone calls with no central record, making tracking impossible |
 | **No Accountability Framework** | Officers can close or ignore complaints without providing proof of resolution |
 | **Manual Processing Delays** | Sorting thousands of grievances by hand causes multi-week backlogs |
