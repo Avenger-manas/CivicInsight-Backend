@@ -496,13 +496,13 @@ git push origin feature/your-feature-name
 # Open a Pull Request
 ```
 
----
+----
 
 ## 📄 License
 
 Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for full details.
 
----
+----
 
 <div align="center">
 
