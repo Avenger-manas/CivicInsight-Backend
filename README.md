@@ -381,7 +381,7 @@ Ensure the following are installed and running before setup:
 
 ---
 
-### Step 1 — Clone the Repository
+--- Step 1 — Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/civic-insight-backend.git
