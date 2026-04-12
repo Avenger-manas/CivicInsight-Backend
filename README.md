@@ -59,7 +59,7 @@ Political offices across India face a systemic crisis in grievance management:
 
 CivicInsight addresses all five by establishing a **unified Digital Command Center** — giving elected representatives real-time situational awareness of their entire constituency, while letting citizens log in instantly via Google.
 
----
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🏗️ Architecture
 
