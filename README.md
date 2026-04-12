@@ -116,7 +116,7 @@ The system is designed with a **Privacy-First** principle at its core. All AI in
   Google"          screen)             URI callback        user profile     begins
 ```
 
----
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🚀 Key Features
 
