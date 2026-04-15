@@ -138,7 +138,7 @@ Three distinct access tiers are secured end-to-end with **JWT authentication**:
 - **Officer** — View assigned workload, update ticket status, upload resolution proof
 - **Administrator** — Access full analytics dashboard, heatmaps, and officer performance reports
 
----
+---------------------------------------------------
 
 ## 🛠️ Tech Stack
 
