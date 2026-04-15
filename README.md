@@ -245,7 +245,7 @@ Frontend                      Google                        Backend
    │           (signed, ready for API calls)                    │
 ```
 
--- Backend Endpoint --
+-- Backend Endpoint -------------------------------
 
 ```
 GET /auth/google/callback?code={auth_code}&check=user
