@@ -153,7 +153,7 @@ Three distinct access tiers are secured end-to-end with **JWT authentication**:
 | **Build Tool** | Maven | Dependency management and packaging |
 | **Scheduler** | Spring Scheduler | SLA monitoring and escalation triggers |
 
----
+---------------------------------------------------
 
 ## 🔌 API Reference
 
