@@ -317,7 +317,7 @@ params.add("redirect_uri", "https://civic-insight.vercel.app/login.html");
 params.add("grant_type", "authorization_code");
 ```
 
----
+---------------------------------------------------
 
 ## 🤖 AI Engine
 
