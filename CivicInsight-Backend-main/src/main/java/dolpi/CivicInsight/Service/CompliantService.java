@@ -92,12 +92,6 @@ public class  CompliantService {
         }
     }
 
-    public String sendcomplaint(Complaints complaints) {
-        complaints.setStatus("Processing");
-        reportRepo.save(complaints);        // Give Id
-        processComplaint(complaints);       // work into background
-        return "Complaint received! Tracking ID: " + complaints.getId();  //return id
-    }
 
     public Complaints checkstatus(String id) {
         Optional<Complaints> complaint = reportRepo.findById(id);
