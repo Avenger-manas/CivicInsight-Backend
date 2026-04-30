@@ -3,6 +3,7 @@ package dolpi.CivicInsight.Controller;
 import dolpi.CivicInsight.DTO.officerDTO;
 import dolpi.CivicInsight.Entity.Complaints;
 import dolpi.CivicInsight.Service.CompliantService;
+import dolpi.CivicInsight.Service.SendComplaintService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,11 +21,14 @@ import org.springframework.web.bind.annotation.*;
 public class Complaint {
 
     @Autowired
+    private SendComplaintService sendComplaint;
+
+    @Autowired
     private CompliantService compliantService;
 
     @PostMapping("/submit")
     public ResponseEntity<?> complaint(@RequestBody Complaints complaints){
-      return new ResponseEntity<>(compliantService.sendcomplaint(complaints), HttpStatus.CREATED);
+      return new ResponseEntity<>(sendComplaint.sendcomplaint(complaints), HttpStatus.CREATED);
     }
 
     //user send id
