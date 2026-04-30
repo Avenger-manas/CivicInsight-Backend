@@ -3,6 +3,7 @@ package dolpi.CivicInsight.Service;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -17,17 +18,18 @@ public class EmailService {
         try {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
-            
-            helper.setFrom("manasrastogi64@gmail.com");
+        
+            helper.setFrom("manasrastogi64@gmail.com"); 
             helper.setTo(to);
             helper.setSubject(subject);
-            helper.setText(body, true); // true = HTML support
+            helper.setText(body, true); 
             
             mailSender.send(message);
-            System.out.println("Email sent to: " + to);
+            System.out.println("Email successfully sent to: " + to);
             
         } catch (MessagingException e) {
-            throw new RuntimeException("Email send failed: " + e.getMessage());
+            e.printStackTrace(); 
+            throw new RuntimeException("Email delivery failed: " + e.getMessage());
         }
     }
 }
